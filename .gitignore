@@ -1,4 +1,7 @@
+# pdflatex
 *.log
 *.aux
 
-.*.swp
+# latexmk
+*.fdb_latexmk
+*.fls
