@@ -2,7 +2,7 @@
 
 name = kevan-hollbach-resume
 
-all: $(name).pdf
+default: $(name).pdf
 
 view: $(name).pdf
 	evince $(name).pdf &
