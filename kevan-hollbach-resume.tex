@@ -17,6 +17,11 @@
 \usepackage{etoolbox}
 \robustify\cftdotfill
 \usepackage{verbatim} % for comment environment
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+}
 
 %-----------------------------------------------------------
 %Edit these values as you see fit
@@ -65,47 +70,11 @@
 
 \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
 
-%\textbf{{\Large Kevan Hollbach}} \\
-%khollbach@gmail.com & 89 Kenilworth Street \\
-%(613) 261-2579 & Ottawa, Ontario, K1Y 3Y6
-
-%\textbf{{\Large Kevan Hollbach}} \\
-%khollbach@gmail.com & 3110 Bandera Drive \\
-%(650) 283-2196 & Palo Alto, CA 94304
-
-%\textbf{{\Large Kevan Hollbach}} \\
-%khollbach@gmail.com & 299 Fremont St \\
-%(415) 370-6614 & San Francisco, CA 94105
-
-%\textbf{{\Large Kevan Hollbach}} \\
-%khollbach@gmail.com & 203 -- 105 McCaul St \\
-%(613) 261-2579 & Toronto, Ontario, M5T 2X3
-
 \textbf{{\Large Kevan Hollbach}} \\
-khollbach@gmail.com & 89 Kenilworth Street \\
-(415) 370-6614 & Ottawa, Ontario, K1Y 3Y6
+khollbach@gmail.com & \href{https://github.com/khollbach}{github.com/khollbach} \\
+(415) 370-6614
 
 \end{tabular*}
-
-\resheading{Education}
-
-\textbf{Master of Science}, University of Toronto \hfill
-\emph{2018 -- 2021}
-\begin{itemize}
-\item Research-based master's in theoretical computer science, distributed systems \\[-2pt]
-\item Thesis: Every object type is equivalent to some linearizable object type
-\end{itemize}
-
-\textbf{Honours Bachelor of Science}, University of Toronto \hfill
-\emph{2013 -- 2018}
-\begin{itemize}
-\item Computer Science Specialist; Focus in Computer Systems, Focus in Theory of Computation \\[0pt]
-    \begin{itemize}
-    \item Received grades of 95\% or higher in five graduate-level computer science courses: \\ Theory of Distributed Computing, Algorithm Design \& Analysis, Graph Theory, \\ Advanced Topics in Distributed Computing, Topics in the Theory of Computation \\[4pt]
-    \item Received grades of 90\% or higher in many fourth-year computer science courses; e.g., \\ Compilers \& Interpreters, Advanced Computer Networks, Complexity \& Computability
-    \end{itemize}
-\item Mathematics Minor
-\end{itemize}
 
 \resheading{Work Experience}
 
@@ -140,6 +109,26 @@ khollbach@gmail.com & 89 Kenilworth Street \\
 \emph{Summer 2016}
 \begin{itemize}
 \item Led conversion to modern Java build system using Jenkins and Gradle%, \\ including nightly builds and tests
+\end{itemize}
+
+\resheading{Education}
+
+\textbf{Master of Science}, University of Toronto \hfill
+\emph{2018 -- 2021}
+\begin{itemize}
+\item Research-based master's in theoretical computer science, distributed systems \\[-2pt]
+\item Thesis: Every object type is equivalent to some linearizable object type
+\end{itemize}
+
+\textbf{Honours Bachelor of Science}, University of Toronto \hfill
+\emph{2013 -- 2018}
+\begin{itemize}
+\item Computer Science Specialist; Focus in Computer Systems, Focus in Theory of Computation \\[0pt]
+    \begin{itemize}
+    \item Received grades of 95\% or higher in five graduate-level computer science courses: \\ Theory of Distributed Computing, Algorithm Design \& Analysis, Graph Theory, \\ Advanced Topics in Distributed Computing, Topics in the Theory of Computation \\[4pt]
+    \item Received grades of 90\% or higher in many fourth-year computer science courses; e.g., \\ Compilers \& Interpreters, Advanced Computer Networks, Complexity \& Computability
+    \end{itemize}
+\item Mathematics Minor
 \end{itemize}
 
 \resheading{Technical Skills} \\[0pt]

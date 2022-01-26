@@ -1,6 +1,7 @@
 # pdflatex
 *.log
 *.aux
+*.out
 
 # latexmk
 *.fdb_latexmk
