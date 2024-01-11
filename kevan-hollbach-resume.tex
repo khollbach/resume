@@ -1,0 +1,132 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+% (c) 2011 Scott Clark <sc932@cornell.edu> http://cam.cornell.edu/~sc932
+% (c) 2024 Kevan Hollbach <khollbach@gmail.com>
+%
+% This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+\usepackage{etoolbox}
+\robustify\cftdotfill
+\usepackage{verbatim} % for comment environment
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+}
+\urlstyle{same}
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars
+                                      % (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+%-----------------------------------------------------------
+%Margin setup
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{-0.25in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.75in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{0pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}%
+\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox%
+[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+
+%-----------------------------------------------------------
+\begin{document}
+
+\textbf{\Large Kevan Hollbach} \hfill {\sffamily \href{https://www.linkedin.com/in/kevan-hollbach/}{linkedin.com/in/kevan-hollbach}}
+
+{\sffamily khollbach@gmail.com} \hfill {\sffamily \href{https://github.com/khollbach/}{github.com/khollbach}}
+
+\resheading{Work Experience}
+
+\textbf{Professional Sabbatical} \hfill 2023
+
+Attended the Recurse Center, a computer programming retreat. Selected projects:
+\begin{itemize}
+\item {\sffamily \href{https://github.com/khollbach/apple-ii-demos/}{Demos}} and {\sffamily \href{https://github.com/khollbach/apple-ii-games/}{games}} written in assembly and C for the Apple II home computer \\[-2pt]
+\item {\sffamily \href{https://github.com/khollbach/apple-ii-bas2wav/}{bas2wav}}: Rust tool to convert Applesoft BASIC source code into .wav audio \\[-2pt]
+\item {\sffamily \href{https://github.com/khollbach/chip-8/}{CHIP-8}}: retro video game system emulator, written in Rust \\[-2pt]
+\item {\sffamily \href{https://github.com/khollbach/space-invaders/}{Space Invaders}}: video game for an embedded system, written in Rust
+\end{itemize}
+
+\textbf{Software Engineer}, Google, San Francisco \hfill June 2022 -- January 2023
+\begin{itemize}
+\item Wrote CLI tools in Rust to manipulate the content of Fuchsia archive format files \\[-2pt]
+\item Migrated C++ code for touchscreen gesture detection to next generation graphics/input stack
+\end{itemize}
+
+\textbf{Software Engineering Intern}, Cruise, San Francisco \hfill Spring 2020
+\begin{itemize}
+\item Developed machine learning infrastructure in Go for a self-driving car \\[-2pt]
+\item Added lidar point cloud metrics to a production big data pipeline
+\end{itemize}
+
+\textbf{Software Engineering Intern}, Rubrik, Palo Alto \hfill Spring 2019
+\begin{itemize}
+\item Wrote production Scala code for a scalable, fault-tolerant distributed system \\[-2pt]
+\item Improved VM snapshot recovery performance by shortening archived diff-chains
+\end{itemize}
+
+\textbf{Software Engineering Intern}, NVIDIA, Santa Clara \hfill Summer 2018
+\begin{itemize}
+\item Designed and wrote embedded C++ code for the Tegra SoC platform to control \\ clocks and resets, I$^2$C bus functionality, and hardware security module behaviour \\[-2pt]
+\item Worked with and debugged QNX resource managers and Linux device drivers
+\end{itemize}
+
+\resheading{Education}
+
+\textbf{Research-based Master of Science}, University of Toronto \hfill 2018 -- 2021
+
+Theoretical Computer Science
+\begin{itemize}
+\item Research area: distributed systems, computability in the asynchronous shared memory model \\[-2pt]
+\item Thesis: Every object type is equivalent to some linearizable object type
+\end{itemize}
+
+\textbf{Honours Bachelor of Science}, University of Toronto \hfill 2013 -- 2018
+
+Computer Science (Focus in Computer Systems, Focus in Theory of Computation)
+
+Mathematics Minor
+\begin{itemize}
+\item Grades of 95\% or higher in five graduate-level computer science courses: \\ Theory of Distributed Computing, Algorithm Design \& Analysis, Graph Theory, \\ Advanced Topics in Distributed Computing, Topics in the Theory of Computation
+\item Grades of 90\% or higher in many fourth-year computer science courses; e.g., \\ Compilers \& Interpreters, Advanced Computer Networks, Complexity \& Computability
+\end{itemize}
+
+\end{document}
